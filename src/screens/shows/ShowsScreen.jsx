@@ -52,7 +52,7 @@ const ShowsScreen = () => {
       {allShowsData?.length > 0 && (
         <ShowsList showsData={allShowsData} showsTitle={"All Shows"} />
       )}
-
+      mohamed salah 
       <FreeTrial />
     </div>
   );
