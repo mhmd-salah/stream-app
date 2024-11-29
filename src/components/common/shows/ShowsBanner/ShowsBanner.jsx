@@ -1,6 +1,10 @@
 import { FiExternalLink } from "react-icons/fi";
 import { BaseLinkPrimary } from "../../../../styles/components/Button";
-import { Container, HeadingTitle, Paragraph } from "../../../../styles/global/default";
+import {
+  Container,
+  HeadingTitle,
+  Paragraph,
+} from "../../../../styles/global/default";
 import { ShowsBannerWrapper } from "./ShowsBanner.styles";
 import PropTypes from "prop-types";
 import { MdLanguage } from "react-icons/md";
@@ -10,7 +14,9 @@ const ShowsBanner = ({ showData }) => {
   return (
     <ShowsBannerWrapper className="top-spacing-fix">
       <Container>
-        <div className="banner-img flex justify-center items-end">
+        <div className="banner-img flex justify-center items-end" style={{
+          backgroundImage:`linear-gradient(0deg,#141414 0%, rgba(20,20,20,0.00) 100%),url(${showData?.image?.original}) top/cover no-repeat fixed`
+        }}>
           <div className="banner-content text-center">
             <HeadingTitle className="banner-title">
               {showData?.name}
@@ -29,14 +35,12 @@ const ShowsBanner = ({ showData }) => {
               >
                 <span className="btn-text">Viste Official Site</span>
                 <span className="btn-icon">
-                  <FiExternalLink/>
+                  <FiExternalLink />
                 </span>
               </BaseLinkPrimary>
               <div className="flex items-center flex-wrap banner-info-item">
                 <Paragraph>
-                  <span className="font-bold text-white">
-                    Genre:
-                  </span>
+                  <span className="font-bold text-white">Genre:</span>
                   <div className="font-semibold">
                     {showData?.genres?.join(", ")}
                   </div>
@@ -44,7 +48,7 @@ const ShowsBanner = ({ showData }) => {
                 <ul className="info-list flex items-center justify-center flex-wrap">
                   <li className="inline-flex items-center info-item">
                     <span className="info-item-icon inline-flex items-center justify-center">
-                      <MdLanguage size={20}/>
+                      <MdLanguage size={20} />
                     </span>
                     <span className="info-item-value">
                       {showData?.language}

@@ -30,4 +30,23 @@ export const ShowsBannerWrapper = styled.section`
       }
     }
   }
+  .banner-title {
+    text-shadow: 2px 2px 4px ${theme.colors.black15};
+  }
+  .banner-info {
+    margin-top: 24px;
+    row-gap: 16px;
+    &-item {
+      column-gap: 24px;
+    }
+  }
+  .info-list{
+    column-gap:20px;
+    row-gap:8px;
+
+    .info-item{
+      column-gap:8px;
+      
+    }
+  }
 `;
