@@ -20,6 +20,7 @@ const ShowsBanner = ({ showData }) => {
           <div className="banner-content text-center">
             <HeadingTitle className="banner-title">
               {showData?.name}
+              
             </HeadingTitle>
             <div  
               className="summary-text"
