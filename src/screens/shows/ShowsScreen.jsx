@@ -51,7 +51,7 @@ const ShowsScreen = () => {
       {highRatedShowsData?.length > 0 && (
         <ShowsSlider
           sliderType={HIGH_RATED_SHOWS}
-          sliderTitle={"All Time Popular Shows"}
+          sliderTitle={"All Time Populer Shows"}
           showsData={highRatedShowsData}
         />
       )}
