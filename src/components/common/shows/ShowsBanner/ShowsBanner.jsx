@@ -21,7 +21,7 @@ const ShowsBanner = ({ showData }) => {
             <HeadingTitle className="banner-title">
               {showData?.name}
             </HeadingTitle>
-            <div
+            <div  
               className="summary-text"
               dangerouslySetInnerHTML={{
                 __html: showData?.summary?.substring(0, 240) + " ...",
